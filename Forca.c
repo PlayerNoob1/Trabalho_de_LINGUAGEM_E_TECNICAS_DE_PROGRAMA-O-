@@ -1,9 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+	int bananax;
+	void banana(int bananax){
 	
-	
-	
+		char a,b,n;
+		char test;
+		int tentativas;
+		
+		tentativas = 0;
+		a = '_';
+		b = '_';
+		n = '_';
+		
+		printf("...................Jogo da Forca...................\nAcerte a palavra advinhando 1 letra por vez\nLimite de tentativas:10\n");
+		
+		void jogo(int op) {
+			printf("A palavra e : %c %c %c %c %c %c \n", b,a,n,a,n,a);
+			printf("Adivinhe uma letra: ");
+			scanf(" %c", &test);
+			if (test == 'b'){
+				b = test;
+				if (b == 'b' && a == 'a' && n == 'n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else jogo(op);
+			}else if(test == 'a'){
+				a = test;
+				if (b == 'b' && a == 'a' && n == 'n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else jogo(op);
+			}else if(test == 'n'){
+				n = test;
+				if (b == 'b' && a == 'a' && n == 'n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else jogo(op);
+			}else if (tentativas == 10 || tentativas >= 10){
+				printf("Mais de 10 tentativas erradas!\n ...................FIM DE JOGO...................");
+				exit(0);
+			}else{
+				tentativas = tentativas + 1;
+				printf("Nao tem a letra, contagem de tentativas erradas: %d \n",tentativas);
+				jogo(op);
+			}
+		}
+		
+		jogo(op);
+	}
 	
 	int abacax;
 	void abacaxi(int abacax){
@@ -84,6 +129,9 @@ int main() {
 		switch(forca){
 			case 1:
 				abacaxi(abacax);
+				break;
+			case 2:
+				banana(bananax);
 				break;
 			default:
 				printf("Option Invalida, tente novamente\n");
