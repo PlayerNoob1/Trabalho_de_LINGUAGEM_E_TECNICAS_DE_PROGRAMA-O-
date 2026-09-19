@@ -1,12 +1,82 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int armadurax;
+	void armadura (int armadurax){
+		
+		char a,r,m,d,u;
+		int inicio,test1,tentativas,op;
+	    
+		tentativas = 0;
+		a = '_';
+		r = '_';
+		m = '_';
+		a = '_';
+		d = '_';
+		u = '_';
+		r = '_';
+		a = '_';
+			
+		printf("...................Jogo da Forca...................\nAcerte a palavra advinhando 1 letra por vez\nLimite de tentativas:10\n");
+		
+		void jogo(int op) {
+			printf("A palavra e : %c %c %c %c %c %c %c %c \n", a,r,m,a,d,u,r,a);
+			printf("Adivinhe uma letra: ");
+			scanf(" %c", &test1);
+			if (test1 == 'a'){
+				a = test1;
+				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'r'){
+				r = test1;
+				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'm'){
+			m = test1;
+					if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'd'){
+				d = test1;
+				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);
+			}else if(test1 == 'u'){
+				u = test1;
+				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+					jogo (op);
+			}else if (tentativas == 10 || tentativas >=10){
+				printf("Mais de 10 tentativas erradas!\n ...................FIM DE JOGO...................");
+				exit(0);
+			}else{
+				tentativas = tentativas + 1;
+				printf("Nao tem a letra, contagem de tentativas erradas: %d \n",tentativas);
+				jogo(op);
+			}
+		}
+			
+		jogo(op);
+	}
+
 	int bananax;
 	void banana(int bananax){
 	
 		char a,b,n;
 		char test;
-		int tentativas;
+		int tentativas; //Eduardo, faltou a variavel "op" aqui, sem isso o codigo não roda.
 		
 		tentativas = 0;
 		a = '_';
@@ -132,6 +202,9 @@ int main() {
 				break;
 			case 2:
 				banana(bananax);
+				break;
+			case 3:
+				armadura(armadurax); //Adicionei mais 1 case para armadura
 				break;
 			default:
 				printf("Option Invalida, tente novamente\n");
