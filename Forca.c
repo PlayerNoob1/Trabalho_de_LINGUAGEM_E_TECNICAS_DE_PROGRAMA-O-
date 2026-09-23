@@ -1,6 +1,108 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int caleidoscopiox;
+	void caleidoscopio (int caleidoscopiox){
+		
+		char c,a,l,e,i,d,o,s,p;
+		int inicio,tentativas,op;
+		char test1;
+	    
+		tentativas = 0;
+		c = '_';
+		a = '_';
+		l = '_';
+		e = '_';
+		i = '_';
+		d = '_';
+		o = '_';
+		s = '_';
+		c = '_';
+		o = '_';
+		p = '_';
+		i = '_';
+		o = '_';
+		
+		printf("...................Jogo da Forca...................\nAcerte a palavra advinhando 1 letra por vez\nLimite de tentativas:10\n");
+		
+		void jogo(int op) {
+			printf("A palavra e : %c %c %c %c %c %c %c %c %c %c %c %c %c \n", c,a,l,e,i,d,o,s,c,o,p,i,o);
+			printf("Adivinhe uma letra: ");
+			scanf(" %c", &test1);
+			if (test1 == 'c'){
+				c = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'a'){
+				a = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'l'){
+			l = test1;
+					if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'e'){
+				e = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);
+			}else if(test1 == 'i'){
+				i = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+					jogo (op);
+			}else if(test1 == 'd'){
+				d = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+			}else if(test1 == 'o'){
+				o = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 's'){
+				s = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'p'){
+				p = test1;
+				if (c == 'c' && a == 'a' && l == 'l' && e == 'e' && i =='i' && d == 'd' && o == 'o' && s == 's' && p == 'p'){
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if (tentativas == 10 || tentativas >=10){
+				printf("Mais de 10 tentativas erradas!\n ...................FIM DE JOGO...................");
+				exit(0);
+			}else{
+				tentativas = tentativas + 1;
+				printf("Nao tem a letra, contagem de tentativas erradas: %d \n",tentativas);
+				jogo(op);
+			}
+		}
+			
+		jogo(op);
+	}
+
 	int carabinax;// carabina
 	void carabina (int carabinax){
 		
@@ -357,6 +459,9 @@ int main() {
 				break;
 			case 5:
 				carabina(carabinax);
+				break;
+			case 6:
+				caleidoscopio(caleidoscopiox);
 				break;
 			default:
 				printf("Option Invalida, tente novamente\n");
