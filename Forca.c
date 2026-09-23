@@ -5,7 +5,8 @@ int laranjax;
 	void laranja(int laranjax){
 		
 		char a,r,n,j,l;
-		int inicio,test1,tentativas,op;
+		int inicio,tentativas,op;
+		char test1;
 	    
 		tentativas = 0;
 		l = '_';
@@ -74,7 +75,8 @@ int armadurax;
 	void armadura (int armadurax){
 		
 		char a,r,m,d,u;
-		int inicio,test1,tentativas,op;
+		int inicio,tentativas,op;
+		char test1;
 	    
 		tentativas = 0;
 		a = '_';
@@ -262,7 +264,7 @@ int armadurax;
 int main() {
 	int niveis,forca,iniciar,inicio;
 	void tela_niveis(int niveis){
-		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil");
+		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil\n");
 		scanf("%d",&forca);
 	
 		switch(forca){
