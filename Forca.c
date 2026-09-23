@@ -1,7 +1,82 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int laranjax;
+	int carabinax;// carabina
+	void carabina (int carabinax){
+		
+		char c,a,r,b,i,n;
+		int inicio,test,tentativas,op;
+	    
+		tentativas = 0;
+		a = '_';
+		c = '_';
+		r = '_';
+		b = '_';
+		i = '_';
+		n = '_';
+			
+		printf("...................Jogo da Forca...................\nAcerte a palavra advinhando 1 letra por vez\nLimite de tentativas:10\n");
+		
+		void jogo(int op) {
+			printf("A palavra e : %c %c %c %c %c %c %c %c \n", c,a,r,a,b,i,n,a);
+			printf("Adivinhe uma letra: ");
+			scanf(" %c", &test);
+			if (test == 'a'){
+				a = test;
+				if (c == 'c' && a == 'a' && r == 'r' && b == 'b' && i =='i' && n =='n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test == 'r'){
+				r = test;
+				if (c == 'c' && a == 'a' && r == 'r' && b == 'b' && i =='i' && n =='n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test == 'b'){
+				b = test;
+				if (c == 'c' && a == 'a' && r == 'r' && b == 'b' && i =='i' && n =='n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test == 'i'){
+				i = test;
+				if (c == 'c' && a == 'a' && r == 'r' && b == 'b' && i =='i' && n =='n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);
+			}else if(test == 'n'){
+				n = test;
+				if (c == 'c' && a == 'a' && r == 'r' && b == 'b' && i =='i' && n =='n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+					jogo (op);
+			}else if(test == 'c'){
+				c = test;
+				if (c == 'c' && a == 'a' && r == 'r' && b == 'b' && i =='i' && n =='n'){
+					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					exit(0);
+				}else 
+					jogo (op);
+			}else if (tentativas == 10 || tentativas >=10){
+				printf("Mais de 10 tentativas erradas!\n ...................FIM DE JOGO...................");
+				exit(0);
+			}else{
+				tentativas = tentativas + 1;
+				printf("Nao tem a letra, contagem de tentativas erradas: %d \n",tentativas);
+				jogo(op);
+			}
+		}
+			
+		jogo(op);
+	}
+
+	int laranjax;
 	void laranja(int laranjax){
 		
 		char a,r,n,j,l;
@@ -264,7 +339,7 @@ int armadurax;
 int main() {
 	int niveis,forca,iniciar,inicio;
 	void tela_niveis(int niveis){
-		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil\n");
+		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil\n5.Facil\n");
 		scanf("%d",&forca);
 	
 		switch(forca){
@@ -279,6 +354,9 @@ int main() {
 				break;
 			case 4:
 				laranja(laranjax);
+				break;
+			case 5:
+				carabina(carabinax);
 				break;
 			default:
 				printf("Option Invalida, tente novamente\n");
