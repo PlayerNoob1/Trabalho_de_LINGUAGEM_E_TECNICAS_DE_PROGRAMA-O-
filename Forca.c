@@ -1,6 +1,75 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int laranjax;
+	void laranja(int laranjax){
+		
+		char a,r,n,j,l;
+		int inicio,test1,tentativas,op;
+	    
+		tentativas = 0;
+		l = '_';
+		a = '_';
+		r = '_';
+		a = '_';
+		n = '_';
+		j = '_';
+		a = '_';
+			
+		printf("...................Jogo da Forca...................\nAcerte a palavra advinhando 1 letra por vez\nLimite de tentativas:10\n");
+		
+		void jogo(int op) {
+			printf("A palavra e : %c %c %c %c %c %c %c \n", l,a,r,a,n,j,a);
+			printf("Adivinhe uma letra: ");
+			scanf(" %c", &test1);
+			if (test1 == 'l'){
+				l = test1;
+				if (l == 'l' && a == 'a' && r == 'r' && n == 'n' && j =='j'){
+					printf("Parabens, acertou!!\nPalavra: Laranja\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'a'){
+				a = test1;
+				if (l == 'l' && a == 'a' && r == 'r' && n == 'n' && j =='j'){
+					printf("Parabens, acertou!!\nPalavra: Laranja\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'r'){
+			r = test1;
+					if (l == 'l' && a == 'a' && r == 'r' && n == 'n' && j =='j'){
+					printf("Parabens, acertou!!\nPalavra: Laranja\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'n'){
+				n = test1;
+				if (l == 'l' && a == 'a' && r == 'r' && n == 'n' && j =='j'){
+					printf("Parabens, acertou!!\nPalavra: Laranja\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);
+			}else if(test1 == 'j'){
+				j = test1;
+				if (l == 'l' && a == 'a' && r == 'r' && n == 'n' && j =='j'){
+					printf("Parabens, acertou!!\nPalavra: Laranja\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+					jogo (op);
+			}else if (tentativas == 10 || tentativas >=10){
+				printf("Mais de 10 tentativas erradas!\n ...................FIM DE JOGO...................");
+				exit(0);
+			}else{
+				tentativas = tentativas + 1;
+				printf("Nao tem a letra, contagem de tentativas erradas: %d \n",tentativas);
+				jogo(op);
+			}
+		}
+			
+		jogo(op);
+	}
+
 int armadurax;
 	void armadura (int armadurax){
 		
@@ -26,35 +95,35 @@ int armadurax;
 			if (test1 == 'a'){
 				a = test1;
 				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);	
 			}else if(test1 == 'r'){
 				r = test1;
 				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);	
 			}else if(test1 == 'm'){
 			m = test1;
 					if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);	
 			}else if(test1 == 'd'){
 				d = test1;
 				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);
 			}else if(test1 == 'u'){
 				u = test1;
 				if (a == 'a' && r == 'r' && m == 'm' && d == 'd' && u =='u'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Armadura\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 					jogo (op);
@@ -76,7 +145,7 @@ int armadurax;
 	
 		char a,b,n;
 		char test;
-		int tentativas; //Eduardo, faltou a variavel "op" aqui, sem isso o codigo não roda.
+		int tentativas, op;
 		
 		tentativas = 0;
 		a = '_';
@@ -92,19 +161,19 @@ int armadurax;
 			if (test == 'b'){
 				b = test;
 				if (b == 'b' && a == 'a' && n == 'n'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Banana\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else jogo(op);
 			}else if(test == 'a'){
 				a = test;
 				if (b == 'b' && a == 'a' && n == 'n'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Banana\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else jogo(op);
 			}else if(test == 'n'){
 				n = test;
 				if (b == 'b' && a == 'a' && n == 'n'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Banana\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else jogo(op);
 			}else if (tentativas == 10 || tentativas >= 10){
@@ -142,35 +211,35 @@ int armadurax;
 			if (test == 'a'){
 				a = test;
 				if (a == 'a' && b == 'b' && c == 'c' && x == 'x' && i =='i'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Abacaxi\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);	
 			}else if(test == 'b'){
 				b = test;
 				if (a == 'a' && b == 'b' && c == 'c' && x == 'x' && i =='i'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Abacaxi\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);	
 			}else if(test == 'c'){
 			c = test;
 					if (a == 'a' && b == 'b' && c == 'c' && x == 'x' && i =='i'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Abacaxi\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);	
 			}else if(test == 'x'){
 				x = test;
 				if (a == 'a' && b == 'b' && c == 'c' && x == 'x' && i =='i'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Abacaxi\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 				 jogo (op);
 			}else if(test == 'i'){
 				i = test;
 				if (a == 'a' && b == 'b' && c == 'c' && x == 'x' && i =='i'){
-					printf("Parabens, acertou!! Total de erros: %d", tentativas);
+					printf("Parabens, acertou!!\nPalavra: Abacaxi\nTotal de erros: %d", tentativas);
 					exit(0);
 				}else 
 					jogo (op);
@@ -193,7 +262,7 @@ int armadurax;
 int main() {
 	int niveis,forca,iniciar,inicio;
 	void tela_niveis(int niveis){
-		printf("Niveis: \n1.Facil");
+		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil");
 		scanf("%d",&forca);
 	
 		switch(forca){
@@ -205,6 +274,9 @@ int main() {
 				break;
 			case 3:
 				armadura(armadurax); //Adicionei mais 1 case para armadura
+				break;
+			case 4:
+				laranja(laranjax);
 				break;
 			default:
 				printf("Option Invalida, tente novamente\n");
