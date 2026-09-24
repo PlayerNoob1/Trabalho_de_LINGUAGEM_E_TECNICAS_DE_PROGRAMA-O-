@@ -1,6 +1,106 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int computadorx;
+	void computador(int computadorx){
+		
+		char c,o,m,p,u,t,a,d,r;
+		int inicio,tentativas,op;
+		char test1;
+	    
+		tentativas = 0;
+		c = '_';
+		o = '_';
+		m = '_';
+		p = '_';
+		u = '_';
+		t = '_';
+		a = '_';
+		d = '_';
+		r = '_';
+			
+		printf("...................Jogo da Forca...................\nAcerte a palavra advinhando 1 letra por vez\nLimite de tentativas:10\n");
+		
+		void jogo(int op) {
+			printf("A palavra e : %c %c %c %c %c %c %c %c %c %c \n", c,o,m,p,u,t,a,d,o,r);
+			printf("Adivinhe uma letra: ");
+			scanf(" %c", &test1);
+			if (test1 == 'c'){
+				c = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'o'){
+				o = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'm'){
+				m = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'p'){
+				p = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'u'){
+				u = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 't'){
+				t = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'a'){
+				a = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'd'){
+				d = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+				 jogo (op);	
+			}else if(test1 == 'r'){
+				r = test1;
+				if (c == 'c' && o == 'o' && m == 'm' && p == 'p' && u == 'u' && t == 't' && a == 'a' && d == 'd' && r == 'r'){
+					printf("Parabens, acertou!!\nPalavra: Computador\nTotal de erros: %d", tentativas);
+					exit(0);
+				}else 
+					jogo (op);
+			}else if (tentativas == 10 || tentativas >=10){
+				printf("Mais de 10 tentativas erradas!\n ...................FIM DE JOGO...................");
+				exit(0);
+			}else{
+				tentativas = tentativas + 1;
+				printf("Nao tem a letra, contagem de tentativas erradas: %d \n",tentativas);
+				jogo(op);
+			}
+		}
+			
+		jogo(op);
+	}
+
 int caleidoscopiox;
 	void caleidoscopio (int caleidoscopiox){
 		
@@ -441,7 +541,7 @@ int armadurax;
 int main() {
 	int niveis,forca,iniciar,inicio;
 	void tela_niveis(int niveis){
-		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil\n5.Facil\n");
+		printf("Niveis: \n1.Facil\n2.Facil\n3.Facil\n4.Facil\n5.Médio\n6.Difícil\n7.Difícil\n");
 		scanf("%d",&forca);
 	
 		switch(forca){
@@ -462,6 +562,9 @@ int main() {
 				break;
 			case 6:
 				caleidoscopio(caleidoscopiox);
+				break;
+			case 7:
+				computador(computadorx);
 				break;
 			default:
 				printf("Option Invalida, tente novamente\n");
